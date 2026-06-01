@@ -3,7 +3,6 @@ import pandas as pd
 import joblib
 import fertilizer
 
-# Load model
 model = joblib.load("crop_model.pkl")
 
 st.set_page_config(page_title="Smart Agriculture AI", layout="centered")
@@ -37,9 +36,3 @@ if st.button("Predict"):
 
     st.success(f"Recommended Crop: {crop}")
     st.info(f"Recommended Fertilizer: {fert}")
-    justify="center"
-)
-
-result_label.place(relx=0.5, rely=.9, anchor="center")
-
-root.mainloop()
